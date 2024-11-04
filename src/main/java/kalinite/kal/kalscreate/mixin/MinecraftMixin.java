@@ -1,6 +1,6 @@
-package com.example.modid.mixin;
+package kalinite.kal.kalscreate.mixin;
 
-import com.example.modid.ExampleMod;
+import kalinite.kal.kalscreate.KalsCreate;
 
 import net.minecraft.client.Minecraft;
 
@@ -15,6 +15,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class MinecraftMixin {
 	@Inject(method = "<init>", at = @At("TAIL"))
 	private void example$init(GameConfig gameConfig, CallbackInfo ci) {
-		ExampleMod.LOGGER.info("Hello from {}", ExampleMod.NAME);
+		KalsCreate.LOGGER.info("Hello from {}", KalsCreate.NAME);
 	}
 }
